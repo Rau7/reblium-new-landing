@@ -1,0 +1,647 @@
+.register-main {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/reb.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 25px;
+  z-index: 10;
+}
+
+.reblium-logo img {
+  width: 204px;
+  height: 25px;
+}
+
+.menu-icon {
+  font-size: 32px;
+  color: #00b8e4;
+}
+
+.register-area {
+  position: fixed;
+  top: 48%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.register-area h1 {
+  color: white;
+  font-family: "Changa One", cursive;
+  text-align: center;
+  font-size: 4.8rem;
+  margin-bottom: 7.5rem;
+}
+
+label {
+  font-size: 1.6rem !important;
+  color: white;
+  text-align: right;
+}
+
+.email-area {
+  margin-right: 48px;
+}
+
+.password-area {
+  margin-right: 20px;
+}
+
+.login-area {
+  margin-right: 53px;
+}
+
+.name-area {
+  margin-right: 49px;
+}
+
+.g-3 {
+  margin-top: 2.5rem;
+}
+
+.register-area input {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffffff;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.form-control:focus {
+  color: white;
+  font-size: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: #673ab7;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #673ab7;
+}
+
+/* MAIN */
+
+.hero-imgs {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  transition: all 1s;
+}
+
+.hero-imgs.getting-started-anim {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.hero-imgs.middle-anim {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.hero-imgs.partners-anim {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.getting-started-hero {
+  background-image: url("../images/gettingMain.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+}
+
+.middle-hero {
+  background-image: url("../images/signMain.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+}
+
+.partners-hero {
+  background-image: url("../images/gettingMain.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-btn-area {
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reblium-logo-hero {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ABOUT */
+.about-section-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2.5rem;
+}
+
+.about-img-area {
+  background-image: url("../images/aboutMain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 200vh;
+  width: 100%;
+  position: relative;
+}
+.about-exp {
+  text-align: center;
+}
+
+.about-info {
+  padding-left: 11rem;
+  padding-right: 11rem;
+  margin-top: 10rem;
+}
+
+.about-exp h2 {
+  font-family: "Changa One", cursive;
+  color: white;
+  font-size: 4.5rem;
+}
+
+.about-first,
+.about-second {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 3.6rem;
+}
+
+.about-second {
+  margin-top: 5rem;
+}
+
+.team-info {
+  margin-top: 10rem;
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+
+.team-members {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 3.6rem;
+  margin-top: 5rem;
+}
+
+.team-members h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 3.6rem;
+}
+
+.kebab-brake {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 3.6rem;
+}
+
+.team-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team-list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 3.6rem;
+}
+
+.reblium-logo-about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reblium-logo-about img {
+  height: 50px;
+  width: 420px;
+}
+
+/* MAIN CONTACT */
+.contact-section-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-img-area {
+  background-image: url("../images/contactMain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.contact-exp {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.contact-info {
+  padding-left: 11rem;
+  padding-right: 11rem;
+  margin-top: 10rem;
+}
+
+.contact-exp h2 {
+  font-family: "Changa One", cursive;
+  color: white;
+  font-size: 4.5rem;
+}
+
+.contact-first,
+.contact-second,
+.contact-third {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 3.6rem;
+}
+
+.contact-first {
+  margin-top: 5rem;
+}
+
+.contact-second,
+.contact-third {
+  margin-top: 7.5rem;
+}
+
+.contact-second span,
+.contact-third span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  color: #671ae4;
+}
+
+/* SHOWCASE */
+
+.community-showcase {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  margin-top: 5rem;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.community-showcase h1 {
+  font-family: "Changa One", cursive;
+  color: white;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.show-card img {
+  border-radius: 25px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background: rgb(103, 26, 228);
+  background: linear-gradient(
+    90deg,
+    rgba(103, 26, 228, 1) 0%,
+    rgba(78, 13, 32, 1) 100%
+  );
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card-info span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 1rem;
+}
+
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: none;
+}
+
+/* GETTING STARTED */
+
+.getting-started-section::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 450vh;
+  opacity: 0.15;
+  background-image: url("../images/rebMain.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+
+.getting-started-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rem;
+  flex-direction: column;
+}
+
+.getting-started-header h1 {
+  font-size: 5rem;
+  letter-spacing: 0.26em;
+  color: #f2f2f2;
+  font-family: "Rubik", sans-serif;
+}
+
+.getting-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 7.5rem;
+}
+
+.btn-getting {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffffff;
+  border-radius: 0px;
+  width: 30rem;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+}
+
+.btn-getting:hover {
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 0px;
+}
+
+.getting-started-content {
+  padding: 0 30rem;
+}
+
+.single-getting-block-right-img,
+.single-getting-block-left-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 10rem;
+}
+
+.single-getting-info {
+  margin-top: 3.5rem;
+}
+
+.single-getting-info h3 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.4rem;
+  color: #f2f2f2;
+  letter-spacing: 0.26em;
+}
+
+.single-getting-info p {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  color: #f2f2f2;
+  margin-top: 3rem;
+}
+
+.try-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 0rem;
+}
+
+/* PARTNERS */
+
+.partners-section {
+  margin-top: 10rem;
+}
+
+.reblium-logo-partners h1 {
+  font-size: 3rem;
+  letter-spacing: 0.26em;
+  color: #f2f2f2;
+  font-family: "Rubik", sans-serif;
+  margin-top: 0.7rem;
+}
+
+.partner-img img,
+.last-img img {
+  width: 270px;
+  height: 100%;
+}
+
+.partners-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.last-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.reblium-logo-partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.reblium-logo-partners img {
+  width: 204px;
+  height: 25px;
+}
+
+/* PRicinG */
+
+.pricing-section {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.pricing-section::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 275vh;
+  opacity: 0.15;
+  background-image: url("../images/rebMain.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+
+.pricing-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-header h1 {
+  font-size: 5rem;
+  letter-spacing: 0.26em;
+  color: #f2f2f2;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+.avatars-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 5rem;
+}
+
+.pricing-info h2 {
+  font-size: 3.6rem;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+.pricing-info h4 {
+  font-size: 2.4rem;
+  color: white;
+  font-family: "Ruda", sans-serif;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 1rem;
+  margin-top: 7.5rem;
+}
+
+.pricing-tables {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -44rem;
+  margin-top: 2.5rem;
+}
+
+.pricing-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.pricing-table-left h4 {
+  font-size: 1.6rem;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-align: right;
+  font-weight: 700;
+  letter-spacing: 1em;
+  margin-right: -1.1rem;
+}
+
+.pricing-table-left ul,
+.standart-part ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+.pricing-table-left ul li,
+.standart-part ul li {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-align: right;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.standart-part ul li {
+  text-align: center;
+}
+
+.pricing-table-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15rem;
+  border: 1px solid white;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 4.3rem;
+  padding-bottom: 2.5rem;
+}
+
+.pricing-table-left {
+  margin-top: 2.5rem;
+}
+
+.pricing-sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.5rem;
+  margin-right: -3rem;
+}
