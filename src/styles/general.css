@@ -607,6 +607,7 @@ iframe {
 .standart-part ul {
   margin: 0;
   list-style-type: none;
+  padding: 0;
 }
 
 .pricing-table-left ul li,
