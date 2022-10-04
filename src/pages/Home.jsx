@@ -21,27 +21,27 @@ function Home() {
     <>
       <Navbar />
       <section className="home-hero">
-        <div className="row">
-          <div className="col-3 getting-started-hero">
+        <div className="row home-row">
+          <div className="col-md-3 getting-started-hero">
             <div className="hero-btn-area">
-              <a href="/getting_started" className="btn btn-getting">
+              <a href="/getting_started" className="btn btn-getting btn-home">
                 Getting Started
               </a>
             </div>
           </div>
-          <div className="col-6 middle-hero">
+          <div className="col-md-6 middle-hero">
             <div className="reblium-logo-hero">
               <img src={reblogo} alt="reblium-logo" />
             </div>
             <div className="hero-btn-area">
-              <a href="/register" className="btn btn-getting">
+              <a href="/register" className="btn btn-getting btn-home">
                 Sign In
               </a>
             </div>
           </div>
-          <div className="col-3 partners-hero">
+          <div className="col-md-3 partners-hero">
             <div className="hero-btn-area">
-              <a href="/partners" className="btn btn-getting">
+              <a href="/partners" className="btn btn-getting btn-home">
                 Partners
               </a>
             </div>

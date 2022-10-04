@@ -518,3 +518,237 @@ Extra large		xl				≥1200px
     color: #00b8e4;
   }
 }
+
+/* GETTING STARTED */
+
+.single-getting-img img {
+  height: 400px;
+  width: 600px;
+}
+
+@media screen and (max-width: 1600px) {
+  .single-getting-img img {
+    height: 300px;
+    width: 500px;
+  }
+  .getting-started-content {
+    padding: 0 25rem;
+  }
+
+  .getting-started-section::before {
+    height: 400vh;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .single-getting-img img {
+    height: 250px;
+    width: 425px;
+  }
+  .getting-started-content {
+    padding: 0 20rem;
+  }
+  .getting-started-section::before {
+    height: 350vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .single-getting-img img {
+    height: 250px;
+    width: 425px;
+  }
+  .getting-started-content {
+    padding: 0 5rem;
+  }
+  .single-getting-block-right-img {
+    align-items: center;
+  }
+  .getting-started-section::before {
+    height: 350vh;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .single-getting-img img {
+    height: 250px;
+    width: 425px;
+  }
+  .getting-started-content {
+    padding: 0 2.5rem;
+  }
+  .single-getting-block-right-img {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .single-getting-img {
+    width: 100%;
+  }
+
+  .single-getting-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .single-getting-block-right-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single-getting-block-left-img {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .getting-started-content {
+    padding: 0 5rem;
+  }
+
+  .getting-started-header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.22em;
+    color: #f2f2f2;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .btn-getting {
+    font-size: 1.8rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    width: 15rem;
+  }
+
+  .btn-getting:hover {
+    font-size: 1.8rem;
+  }
+  .getting-started-section::before {
+    height: 680vh;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .single-getting-img {
+    width: 100%;
+  }
+
+  .single-getting-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .single-getting-block-right-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single-getting-block-left-img {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .getting-started-content {
+    padding: 0 2.5rem;
+  }
+
+  .getting-started-header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.22em;
+    color: #f2f2f2;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .btn-getting {
+    font-size: 1.6rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    width: 12rem;
+  }
+
+  .btn-getting:hover {
+    font-size: 1.6rem;
+  }
+
+  .getting-btns {
+    gap: 2.5rem;
+  }
+  .getting-started-section::before {
+    height: 580vh;
+  }
+}
+
+/* HOME */
+
+.about-img-area {
+  background-position: center left;
+}
+
+@media screen and (max-width: 1400px) {
+  .btn-home {
+    font-size: 1.6rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+    border-radius: 0px;
+    width: 15rem;
+  }
+
+  .btn-home:hover {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .reblium-logo-about img {
+    height: 30px;
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .reblium-logo-about img {
+    height: 22px;
+    width: 175px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-img-area,
+  .contact-img-area {
+    display: none;
+  }
+  .about-section-main,
+  .contact-section-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .showcase {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .about-info,
+  .team-info,
+  .contact-info,
+  .community-showcase {
+    padding: 0;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .about-exp h2 {
+    font-size: 3rem;
+  }
+  .about-first,
+  .about-second {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+}
