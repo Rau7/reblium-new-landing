@@ -364,6 +364,22 @@ iframe {
   padding: none;
 }
 
+.fa-heart {
+  font-size: 20px;
+  color: #f2f2f2;
+  transition: all 0.3s;
+}
+
+.like-btn {
+  background-color: transparent;
+  border: 0px;
+  margin-left: 1rem;
+}
+
+.fa-heart:hover {
+  color: #00b8e4;
+}
+
 /* GETTING STARTED */
 
 .getting-started-section::before {

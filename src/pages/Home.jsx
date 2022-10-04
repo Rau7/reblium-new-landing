@@ -9,13 +9,24 @@ import show7 from "../images/comm7.png";
 import show8 from "../images/comm8.png";
 import Navbar from "../components/Navbar";
 //import Header from "../components/Header";
-
+import { FaHeart } from "react-icons/fa";
+import axios from "axios";
 import { useEffect } from "react";
 
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const likeImage = (userName) => {
+    axios
+      .post(
+        `https://market-api.reblium.com/tracking?event=showcase.${userName}`
+      )
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -56,6 +67,9 @@ function Home() {
             <div className="card-info">
               <div className="dot" />
               <span>suzanne</span>
+              <button className="like-btn" onClick={() => likeImage("suzanne")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
@@ -63,6 +77,9 @@ function Home() {
             <div className="card-info">
               <div className="dot" />
               <span>besson</span>
+              <button className="like-btn" onClick={() => likeImage("besson")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
@@ -70,6 +87,9 @@ function Home() {
             <div className="card-info">
               <div className="dot" />
               <span>regista</span>
+              <button className="like-btn" onClick={() => likeImage("regista")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
@@ -77,27 +97,39 @@ function Home() {
             <div className="card-info">
               <div className="dot" />
               <span>ezalor</span>
+              <button className="like-btn" onClick={() => likeImage("ezalor")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
             <img src={show5} alt="reblium-community-showcase" />
             <div className="card-info">
               <div className="dot" />
-              <span>sensei</span>
+              <span>lewa</span>
+              <button className="like-btn" onClick={() => likeImage("lewa")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
             <img src={show6} alt="reblium-community-showcase" />
             <div className="card-info">
               <div className="dot" />
-              <span>bonusOne</span>
+              <span>crimson</span>
+              <button className="like-btn" onClick={() => likeImage("crimson")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
             <img src={show7} alt="reblium-community-showcase" />
             <div className="card-info">
               <div className="dot" />
-              <span>felanor</span>
+              <span>mikael</span>
+              <button className="like-btn" onClick={() => likeImage("mikael")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
           <div className="show-card">
@@ -105,6 +137,9 @@ function Home() {
             <div className="card-info">
               <div className="dot" />
               <span>mirror</span>
+              <button className="like-btn" onClick={() => likeImage("mirror")}>
+                <FaHeart className="fa-heart" />
+              </button>
             </div>
           </div>
         </div>
