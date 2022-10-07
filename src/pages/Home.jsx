@@ -1,34 +1,67 @@
 import reblogo from "../images/reblogo.png";
-import show1 from "../images/comm1.png";
-import show2 from "../images/comm2.png";
-import show3 from "../images/comm3.png";
-import show4 from "../images/comm4.png";
-import show5 from "../images/comm5.png";
-import show6 from "../images/comm6.png";
-import show7 from "../images/comm7.png";
-import show8 from "../images/comm8.png";
 import Navbar from "../components/Navbar";
 //import Header from "../components/Header";
-import { FaHeart } from "react-icons/fa";
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import FlipMove from "react-flip-move";
+import Card from "../components/Card";
 
 function Home() {
+  const [active, setActive] = useState("recent");
+  const [avatars, setAvatars] = useState();
+  const [recentAvatars, setRecentAvatars] = useState();
+  const [topAvatars, setTopAvatars] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    getLikes();
   }, []);
 
-  const likeImage = (userName) => {
-    axios
-      .post(
-        `https://market-api.reblium.com/tracking?event=showcase.${userName}`
-      )
-      .catch(function (error) {
-        console.log(error);
-      });
+  const clearResponseData = (arr) => {
+    const keys = Object.keys(arr);
+
+    const resultArr = Object.keys(arr)
+      .map((key, index) => {
+        if (
+          keys.indexOf(key) >= 0 &&
+          key.indexOf("showcase") >= 0 &&
+          key.indexOf("chris") < 0
+        ) {
+          return { key: key, count: arr[key] };
+        }
+      })
+      .filter((element) => element !== undefined);
+
+    return resultArr;
   };
 
-  return (
+  const getLikes = () => {
+    axios.get("https://market-api.reblium.com/tracking").then((response) => {
+      const onlyShowcase = clearResponseData(response.data);
+      setAvatars(onlyShowcase);
+      setRecentAvatars(onlyShowcase);
+      setIsLoading(false);
+    });
+  };
+
+  function showTop() {
+    const tempArr = [...avatars];
+    tempArr.sort((item1, item2) => {
+      return item2.count - item1.count;
+    });
+    setAvatars(tempArr);
+    setActive("top");
+  }
+  function showRecent() {
+    setAvatars(recentAvatars);
+    setActive("recent");
+  }
+  return isLoading ? (
+    <div className="spinner-container">
+      <div className="spinner"></div>
+    </div>
+  ) : (
     <>
       <Navbar />
       <section className="home-hero">
@@ -61,87 +94,23 @@ function Home() {
       </section>
       <section className="community-showcase">
         <h1>Community Showcase</h1>
+        <div className="showcase-button-area">
+          <button
+            className={`btn-showcase ${active === "recent" ? "active" : ""}`}
+            onClick={() => showRecent()}
+          >
+            Recent
+          </button>
+          <button
+            className={`btn-showcase ${active === "top" ? "active" : ""}`}
+            onClick={() => showTop()}
+          >
+            Top
+          </button>
+        </div>
         <div className="showcase">
-          <div className="show-card">
-            <img src={show1} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>suzanne</span>
-              <button className="like-btn" onClick={() => likeImage("suzanne")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show2} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>besson</span>
-              <button className="like-btn" onClick={() => likeImage("besson")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show3} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>regista</span>
-              <button className="like-btn" onClick={() => likeImage("regista")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show4} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>ezalor</span>
-              <button className="like-btn" onClick={() => likeImage("ezalor")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show5} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>lewa</span>
-              <button className="like-btn" onClick={() => likeImage("lewa")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show6} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>crimson</span>
-              <button className="like-btn" onClick={() => likeImage("crimson")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show7} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>mikael</span>
-              <button className="like-btn" onClick={() => likeImage("mikael")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
-          <div className="show-card">
-            <img src={show8} alt="reblium-community-showcase" />
-            <div className="card-info">
-              <div className="dot" />
-              <span>mirror</span>
-              <button className="like-btn" onClick={() => likeImage("mirror")}>
-                <FaHeart className="fa-heart" />
-              </button>
-            </div>
-          </div>
+          {avatars &&
+            avatars.map((item, index) => <Card item={item} index={index} />)}
         </div>
       </section>
       <section className="about-section-main">

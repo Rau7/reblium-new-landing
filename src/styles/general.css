@@ -309,6 +309,7 @@ label {
   padding-left: 8rem;
   padding-right: 8rem;
   margin-top: 5rem;
+  position: relative;
 }
 
 .showcase {
@@ -378,6 +379,49 @@ iframe {
 
 .fa-heart:hover {
   color: #00b8e4;
+}
+
+.showcase-button-area {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-showcase {
+  font-size: 1.5rem;
+  color: #f2f2f2;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #1b2332;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s;
+}
+
+.btn:first-child:hover,
+.btn-showcase:hover,
+.btn-showcase.active {
+  color: #f2f2f2;
+  background: #1b2332;
+  border: 1px solid #1b2332;
+}
+
+@media screen and (max-width: 1050px) {
+  .showcase-button-area {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+    margin: 1.5rem 0;
+  }
 }
 
 /* GETTING STARTED */
